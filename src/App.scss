@@ -1,0 +1,108 @@
+$grey: #dcdcdc;
+$dark-grey: #708090;
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding: 25px 50px;
+  font-size: small;
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    margin: 7px 0;
+  }
+
+  .search {
+    position: relative;
+
+    input {
+      padding: 5px 0 5px 25px;
+    }
+
+    img {
+      position: absolute;
+      left: 3%;
+      top: 20%;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.draggable-item {
+  position: relative;
+  height: 1.2em;
+  border: 1px solid $grey;
+  padding: 8px 0 8px 25px;
+  border-radius: 3px;
+  color: $dark-grey;
+  cursor: move;
+
+  img {
+    position: absolute;
+    right: 3%;
+    top: 25%;
+  }
+}
+
+.selected-list {
+  height: 86%;
+  border: 1px solid #dfd9d9;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 35px;
+  }
+}
+
+.selected-list.shrink {
+  height: 20vh;
+  padding: 30px 10px;
+}
+
+.dropzone {
+  overflow: visible;
+  position: absolute;
+
+  div {
+    margin: 10px 0 10px 23px;
+  }
+
+  .dropped-items {
+    position: relative;
+    top: 215px;
+    overflow-y: auto;
+    height: 30vh;
+    width: 22vw;
+  }
+
+  .draggable-item {
+    width: 15vw;
+
+    .drag-icon {
+      width: 10px !important;
+    }
+  }
+
+  .delete {
+    width: 24px;
+    height: 24px;
+    margin: -5px -35px 0 0;
+    cursor: pointer;
+    display: none;
+  }
+
+  .draggable-item:hover .delete {
+    display: block;
+  }
+}
